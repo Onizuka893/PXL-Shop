@@ -1,0 +1,15 @@
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\bin\Debug\Tussetijdse_test.exe.config
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\bin\Debug\Tussetijdse_test.exe
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\bin\Debug\Tussetijdse_test.pdb
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.csproj.AssemblyReference.cache
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\MainWindow.g.cs
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\App.g.cs
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test_MarkupCompile.cache
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test_MarkupCompile.lref
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\MainWindow.baml
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.g.resources
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.Properties.Resources.resources
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.csproj.GenerateResource.cache
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.csproj.CoreCompileInputs.cache
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.exe
+F:\OefeningenC#Essentials\Tussetijdse_test\Tussetijdse_test\obj\Debug\Tussetijdse_test.pdb
