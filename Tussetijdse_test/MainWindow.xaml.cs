@@ -12,18 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Tussetijdse_test
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
 
         public string output;
         public double totaalPrijs;
         public string totaalPrijsString = "";
+        public string outputString;
+
+        public DispatcherTimer dispatcherTimer = new DispatcherTimer();
+
+        public Random rnd = new Random();
 
         public MainWindow()
         {
@@ -38,8 +41,9 @@ namespace Tussetijdse_test
                 string productNaam = TxtProductNaam.Text;
                 double productPrijs = Convert.ToDouble(TxtProductPrijs.Text);
                 int productHoeveelheid = Convert.ToInt32(TxtHoeveelheid.Text);
-                output += $"{productHoeveelheid} X {productNaam}\n";
+                outputString += $"{productHoeveelheid} X {productNaam}\n";
                 totaalPrijs += productHoeveelheid * productPrijs;
+                output = outputString;
                 TxtOutput.Text = output;
             }
             else
@@ -47,8 +51,9 @@ namespace Tussetijdse_test
                 string productNaam = TxtProductNaam.Text;
                 double productPrijs = Convert.ToDouble(TxtProductPrijs.Text);
                 int productHoeveelheid = Convert.ToInt32(TxtHoeveelheid.Text);
-                output += $"{productHoeveelheid} X {productNaam}\n";
+                outputString += $"{productHoeveelheid} X {productNaam}\n";
                 totaalPrijs += productHoeveelheid * productPrijs;
+                output = outputString;
                 TxtOutput.Text = output;
             }
         }
@@ -70,5 +75,55 @@ namespace Tussetijdse_test
             output += totaalPrijsString;
             TxtOutput.Text = output;
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+            int num = rnd.Next(1, 5);
+            AchterGrondKleur(num);
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            LblTijd.Content = (DateTime.Now.ToString("HH:mm:ss"));
+        }
+
+        private void BtnNieuweBestelling_Click(object sender, RoutedEventArgs e)
+        {
+            TxtOutput.Clear();
+            TxtHoeveelheid.Clear();
+            TxtProductNaam.Clear();
+            TxtProductPrijs.Clear();
+            output = "";
+            outputString = "";
+            totaalPrijs = 0;
+            totaalPrijsString = "";
+            outputString = "";
+        }
+
+        private void AchterGrondKleur(int kleurcode)
+        {
+            switch (kleurcode)
+            {
+                case 1:
+                    DPBG.Background = Brushes.Red;
+                    break;
+                case 2:
+                    DPBG.Background = Brushes.Wheat;
+                    break;
+                case 3:
+                    DPBG.Background = Brushes.Gold;
+                    break;
+                case 4:
+                    DPBG.Background = Brushes.Purple;
+                    break;
+                default:
+                    DPBG.Background = Brushes.Green;
+                    break;
+            }
+        }
+
     }
 }
